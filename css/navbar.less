@@ -1,0 +1,54 @@
+header{
+    border-bottom: solid 3px #16a085;
+    .navbar{
+        display: flex;
+        height: 60px;
+        align-items: center;//主轴居中
+
+        .logo{
+            color: #16a085;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .collapse{
+            display: flex;
+            flex-grow: 1;
+
+            .links{
+                display: flex;
+                margin-right: auto;
+
+                a{
+                    color: #777;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (max-width:600px){
+//     .nav-bar{
+//         ul{
+//             display: none;
+//         }
+//     }
+// }
+//逻辑与"and",逻辑或","
+// @media screen and (orientation:landscape),screen and (min-width:768px){
+//     .nav-bar{
+//         ul{
+//             background-color: gray;
+//         }
+//     }
+// }
+
+//逻辑非"not"
+// @media not screen and (min-width:500px) and (max-width:768px){
+//     .nav-bar{
+//         background-color: green;
+//     }
+// }
+
+//only 支持媒体查询的就执行，不支持就不执行

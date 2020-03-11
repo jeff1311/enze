@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;/*超链接下划线消失*/
+}
+ul{
+    list-style: none;/*列表符号消失*/
+}
