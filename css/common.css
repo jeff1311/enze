@@ -23,10 +23,15 @@ ul {
   list-style: none;
   /*列表符号消失*/
 }
+/*
+display:grid;有兼容性问题，有些浏览器默认不支持
+谷歌浏览器：地址栏输入访问 chrome://flags 找到#enable-experimental-web-platform-features
+Opera浏览器：地址栏输入访问 opera://flags 找到#Enable experimental Web Platform features
+*/
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
+  grid-gap: 10px;
 }
 .col-12 {
   grid-column: span 12;
