@@ -46,7 +46,7 @@ header .navbar .collapse .form a.form-bg {
   background: #16a085;
   color: white;
 }
-@media only screen and (max-width: 900px) {
+@media only all and (max-width: 992px) {
   header .navbar {
     flex-flow: row wrap;
   }

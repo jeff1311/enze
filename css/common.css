@@ -2,6 +2,9 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   transition: all 0.3s;
   -moz-transition: all 0.3s;
   /* Firefox 4 */
@@ -22,50 +25,4 @@ a {
 ul {
   list-style: none;
   /*列表符号消失*/
-}
-/*
-display:grid;有兼容性问题，有些浏览器默认不支持
-谷歌浏览器：地址栏输入访问 chrome://flags 找到#enable-experimental-web-platform-features
-Opera浏览器：地址栏输入访问 opera://flags 找到#Enable experimental Web Platform features
-*/
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px;
-}
-.col-12 {
-  grid-column: span 12;
-}
-.col-11 {
-  grid-column: span 11;
-}
-.col-10 {
-  grid-column: span 10;
-}
-.col-9 {
-  grid-column: span 9;
-}
-.col-8 {
-  grid-column: span 8;
-}
-.col-7 {
-  grid-column: span 7;
-}
-.col-6 {
-  grid-column: span 6;
-}
-.col-5 {
-  grid-column: span 5;
-}
-.col-4 {
-  grid-column: span 4;
-}
-.col-3 {
-  grid-column: span 3;
-}
-.col-2 {
-  grid-column: span 2;
-}
-.col-1 {
-  grid-column: span 1;
 }

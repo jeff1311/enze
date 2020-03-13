@@ -1,0 +1,14 @@
+/*超小屏幕 手机(<768px)*/
+@import url(x-small.css) only screen and (max-width:768px);
+/*小屏幕 平板(≥768px)*/
+@import url(small.css) only screen and (min-width:768px);
+/*中等屏幕 桌面显示器(≥992px)*/
+@import url(medium.css) only screen and (min-width:992px);
+/*大屏幕 大桌面显示器(≥1200px)*/ 
+@import url(large.css) only screen and (min-width:1200px);
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}

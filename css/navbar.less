@@ -1,3 +1,5 @@
+@import "variables.less";
+
 header{
     border-bottom: solid 3px #16a085;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
@@ -12,7 +14,7 @@ header{
             font-weight: bold;
             margin-right: 20px;
             font-size: 1.2rem;
-            
+
             &+label{
                 display: none;
 
@@ -59,7 +61,7 @@ header{
     }
 }
 
-@media only screen and (max-width:900px){
+@media only all and (max-width:@screen-width-md){
     header{
         .navbar{
             flex-flow: row wrap;
