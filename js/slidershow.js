@@ -2,6 +2,10 @@
 var slidershow = {
     render:function(images){
         var html = '';
+        var prevBtn = '<span class="prev-btn iconfont">&#xe744;</span>';
+        var nextBtn = '<span class="next-btn iconfont">&#xe743;</span>';
+        html += prevBtn;
+        html += nextBtn;
         var slides = '<ul class="slides" style="width:' + 100 * images.length + '%;">';
         var navigation = '<ul class="navigation">';
         for (const i in images) {
@@ -15,30 +19,46 @@ var slidershow = {
         html += navigation;
         $('.slidershow').html(html);
 
-        var num = 1;
         $('.navigation li').on('click',function(){
             var index = $(this).index();
-            num = index;
-            $('.navigation li').css('background','none');
-            $(this).css('background','rgba(255, 255, 255, 0.7)');
+            $('.navigation li').removeClass('bar-focus')
+            $(this).addClass('bar-focus');
             $('.slides li').eq(0).css('margin-left',index * -20 + '%')
         });
 
         var ms = 3000;
         var interval = setInterval(slide,ms);
-        function slide(){
-            num = num == 5 ? 0 : num;
-            $('.slides li').eq(0).css('margin-left',num * -20 + '%');
-            $('.navigation li').css('background','none');
-            $('.navigation li').eq(num).css('background','rgba(255, 255, 255, 0.7)');
-            num ++;
+        function slide(act){
+            var i = $('.navigation').find('.bar-focus').index();
+            if(act == 'prev'){
+                i --;
+            }else{
+                i ++;
+            }
+            i = i == images.length ? 0 : i;
+            i = i < 0 ? images.length - 1 : i;
+            $('.slides li').eq(0).css('margin-left',i * -20 + '%');
+            $('.navigation li').removeClass('bar-focus');
+            $('.navigation li').eq(i).addClass('bar-focus');
         }
 
         $('.slidershow').hover(function(){
             clearInterval(interval);
+            $('.prev-btn').css('opacity',1);
+            $('.next-btn').css('opacity',1);
         },function(){
             interval = setInterval(slide,ms);
+            $('.prev-btn').css('opacity',0.1);
+            $('.next-btn').css('opacity',0.1);
         });
+
+        $('.prev-btn').on('click',function(){
+            slide('prev');
+        });
+        $('.next-btn').on('click',function(){
+            slide('next');
+        });
+        
     }
 }
 

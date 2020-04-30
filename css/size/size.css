@@ -1,7 +1,7 @@
 .row {
   /* margin-right: -5px;
     margin-left: -5px; */
-  margin: -5px -5px;
+  margin: -15px -15px;
   clear: both;
 }
 .col-xs-1,
@@ -57,7 +57,7 @@
   min-height: 1px;
   /* padding-right: 5px;
     padding-left: 5px; */
-  padding: 5px 5px;
+  padding: 15px 15px;
 }
 .no-gap {
   margin: 0 0;
