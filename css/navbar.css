@@ -4,7 +4,7 @@ header {
 }
 header .navbar {
   display: flex;
-  padding: 1rem 0;
+  padding: 2rem 0;
   align-items: center;
 }
 header .navbar .logo {
@@ -28,7 +28,7 @@ header .navbar .collapse .links {
   margin-right: auto;
 }
 header .navbar .collapse .links li {
-  margin: 0 10px;
+  margin: 0 1.5rem;
 }
 header .navbar .collapse .links li a {
   color: #777;
