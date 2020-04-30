@@ -24,7 +24,8 @@ var slidershow = {
             $('.slides li').eq(0).css('margin-left',index * -20 + '%')
         });
 
-        var interval = setInterval(slide,2000);
+        var ms = 3000;
+        var interval = setInterval(slide,ms);
         function slide(){
             num = num == 5 ? 0 : num;
             $('.slides li').eq(0).css('margin-left',num * -20 + '%');
@@ -36,7 +37,7 @@ var slidershow = {
         $('.slidershow').hover(function(){
             clearInterval(interval);
         },function(){
-            interval = setInterval(slide,2000);
+            interval = setInterval(slide,ms);
         });
     }
 }

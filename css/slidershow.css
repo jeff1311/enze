@@ -4,6 +4,15 @@
   height: 550px;
   overflow: hidden;
 }
+.slidershow * {
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  /* Firefox 4 */
+  -webkit-transition: all 0.3s ease;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.3s ease;
+  /* Opera */
+}
 .slidershow .slides {
   height: 100%;
   display: flex;
