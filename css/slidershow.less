@@ -1,3 +1,5 @@
+@import "variables.less";
+
 .slidershow{
 
     *{
@@ -9,7 +11,6 @@
 
     position: relative;
     width: 100%;
-    height: 550px;
     overflow: hidden;
 
     .slides{
@@ -22,8 +23,36 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+
+            &:hover{
+                transform: scale(1.05);
+            }
         }
 
+    }
+}
+
+@media all and (max-width:@screen-width-sm){
+    .slidershow{
+        height: 200px;
+    }
+}
+/*小屏幕 平板(≥768px)*/
+@media all and (min-width:@screen-width-sm) and (max-width:@screen-width-md){
+    .slidershow{
+        height: 400px;
+    }
+}
+/*中等屏幕 桌面显示器(≥992px)*/
+@media all and (min-width:@screen-width-md) and (max-width:@screen-width-lg){
+    .slidershow{
+        height: 500px;
+    }
+}
+/*大屏幕 大桌面显示器(≥1200px)*/ 
+@media all and (min-width:@screen-width-lg){
+    .slidershow{
+        height: 550px;
     }
 }
 
@@ -58,6 +87,7 @@
 
 .prev-btn,.next-btn{
     // display: none;
+    z-index: 100;
     opacity: 0.1;
     position: absolute;
     top: 0;
@@ -87,41 +117,3 @@
 .next-btn{
     right: 0;
 }
-
-
-
-// @keyframes switch {
-//     0%{
-//         margin-left: 0%;
-//     }
-//     5%{
-//         margin-left: -20%;
-//     }
-//     20%{
-//         margin-left: -20%;
-//     }
-//     25%{
-//         margin-left: -40%;
-//     }
-//     40%{
-//         margin-left: -40%;
-//     }
-//     45%{
-//         margin-left: -60%;
-//     }
-//     60%{
-//         margin-left: -60%;
-//     }
-//     65%{
-//         margin-left: -80%;
-//     }
-//     80%{
-//         margin-left: -80%;
-//     }
-//     85%{
-//         margin-left: 0%;
-//     }
-//     100%{
-//         margin-left: 0%;
-//     }
-// }

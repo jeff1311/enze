@@ -146,3 +146,15 @@
 .bg-blue {
   background: linear-gradient(135deg, #008ded 0%, #00e8d3 100%) !important;
 }
+footer {
+  width: 100%;
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  padding: 50px 0;
+}
+footer a {
+  text-decoration: none;
+  outline: none;
+  color: #777;
+}
