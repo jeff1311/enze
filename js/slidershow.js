@@ -44,12 +44,12 @@ var slidershow = {
 
         $('.slidershow').hover(function(){
             clearInterval(interval);
-            $('.prev-btn').css('opacity',1);
-            $('.next-btn').css('opacity',1);
+            // $('.prev-btn').css('opacity',1);
+            // $('.next-btn').css('opacity',1);
         },function(){
             interval = setInterval(slide,ms);
-            $('.prev-btn').css('opacity',0.1);
-            $('.next-btn').css('opacity',0.1);
+            // $('.prev-btn').css('opacity',0);
+            // $('.next-btn').css('opacity',0);
         });
 
         $('.prev-btn').on('click',function(){

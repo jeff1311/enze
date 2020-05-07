@@ -6,7 +6,7 @@ header{
     
     .navbar{
         display: flex;
-        padding: 2rem 0;
+        padding: 1rem 0;
         align-items: center;//主轴居中
 
         .logo{
@@ -38,8 +38,11 @@ header{
                 display: flex;
                 margin-right: auto;
 
-                li{
+                & > li{
                     margin: 0 1.5rem;
+                    padding: .5rem 0;
+                    // width: 100px;
+                    // text-align: center;
 
                     a{
                         color: #777;
@@ -63,6 +66,37 @@ header{
                     }
                 }
             }
+
+            .menu-list{
+                min-width: 105px;
+                margin-left: -1.5rem;
+                margin-top: 8rem;
+                // padding-top: 1rem;
+                z-index: 100;
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                // border: solid 1px #16a085;
+                transition: all .3s ease;
+                background: rgba(255,255,255,.8);
+                border-radius: 2px;
+                // border: solid 1px rgba(0,0,0,.1);
+                box-shadow: 0 12px 10px 3px rgba(0,0,0,.1);
+
+                li{
+                    margin: 0;
+                    padding: .5rem 1.5rem;
+                    font-size: 12px;
+                    text-align: left;
+                }
+            }
+
+            .links > li:hover > a + ul{
+                visibility: visible;
+                opacity: 1;
+                margin-top: .5rem;
+            } 
+
         }
     }
 }

@@ -20,6 +20,7 @@
         li{
             width: 20%;
             height: 100%;
+            cursor: pointer;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -30,6 +31,11 @@
         }
 
     }
+
+    &:hover > span{
+        opacity: 1;
+    }
+
 }
 
 @media all and (max-width:@screen-width-sm){
@@ -88,7 +94,7 @@
 .prev-btn,.next-btn{
     // display: none;
     z-index: 100;
-    opacity: 0.1;
+    opacity: 0;
     position: absolute;
     top: 0;
     bottom: 0;

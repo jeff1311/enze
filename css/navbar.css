@@ -3,7 +3,7 @@ header {
 }
 header .navbar {
   display: flex;
-  padding: 2rem 0;
+  padding: 1rem 0;
   align-items: center;
 }
 header .navbar .logo {
@@ -29,13 +29,14 @@ header .navbar .collapse .links {
   display: flex;
   margin-right: auto;
 }
-header .navbar .collapse .links li {
+header .navbar .collapse .links > li {
   margin: 0 1.5rem;
+  padding: 0.5rem 0;
 }
-header .navbar .collapse .links li a {
+header .navbar .collapse .links > li a {
   color: #777;
 }
-header .navbar .collapse .links li a:hover {
+header .navbar .collapse .links > li a:hover {
   color: #333;
 }
 header .navbar .collapse .form a {
@@ -47,6 +48,30 @@ header .navbar .collapse .form a {
 header .navbar .collapse .form a.form-bg {
   background: #16a085;
   color: white;
+}
+header .navbar .collapse .menu-list {
+  min-width: 105px;
+  margin-left: -1.5rem;
+  margin-top: 8rem;
+  z-index: 100;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 12px 10px 3px rgba(0, 0, 0, 0.1);
+}
+header .navbar .collapse .menu-list li {
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  font-size: 12px;
+  text-align: left;
+}
+header .navbar .collapse .links > li:hover > a + ul {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0.5rem;
 }
 @media only all and (max-width: 992px) {
   header .navbar {

@@ -19,12 +19,16 @@
 .slidershow .slides li {
   width: 20%;
   height: 100%;
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slidershow .slides li:hover {
   transform: scale(1.05);
+}
+.slidershow:hover > span {
+  opacity: 1;
 }
 @media all and (max-width: 768px) {
   .slidershow {
@@ -75,7 +79,7 @@
 .prev-btn,
 .next-btn {
   z-index: 100;
-  opacity: 0.1;
+  opacity: 0;
   position: absolute;
   top: 0;
   bottom: 0;
