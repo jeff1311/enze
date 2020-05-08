@@ -9,16 +9,16 @@
 @import url(margin.css);
 @import url(slidershow.css);
 @import url(/plugins/iconfont/iconfont.css);
-.block-1,
-.block-2,
-.block-3,
+.our-services,
+.about-us,
+.news,
 .block-4,
 .block-5 {
   overflow: auto;
 }
-.block-1 *,
-.block-2 *,
-.block-3 *,
+.our-services *,
+.about-us *,
+.news *,
 .block-4 *,
 .block-5 * {
   color: #777c87;
@@ -30,27 +30,27 @@
   -o-transition: all 0.3s ease;
   /* Opera */
 }
-.block-1 .title,
-.block-2 .title,
-.block-3 .title,
+.our-services .title,
+.about-us .title,
+.news .title,
 .block-4 .title,
 .block-5 .title {
   width: 100%;
   text-align: center;
   padding-bottom: 50px;
 }
-.block-1 .title h1,
-.block-2 .title h1,
-.block-3 .title h1,
+.our-services .title h1,
+.about-us .title h1,
+.news .title h1,
 .block-4 .title h1,
 .block-5 .title h1 {
   font-size: 2.5rem;
   font-weight: 500;
   color: #080245;
 }
-.block-1 .title span,
-.block-2 .title span,
-.block-3 .title span,
+.our-services .title span,
+.about-us .title span,
+.news .title span,
 .block-4 .title span,
 .block-5 .title span {
   display: block;
@@ -59,53 +59,83 @@
   background: linear-gradient(to right, #2a169b 10%, #2989d8 50%, #2cd4d9 95%);
   margin: 20px auto;
 }
-.block-1 {
+.our-services {
   width: 100%;
   background: #f5f6fa;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.block-1 .card {
+.our-services .card {
   width: 100%;
   height: 400px;
   background: #fff;
   border-radius: 5px;
 }
-.block-1 .card:hover {
+.our-services .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px 5px #e6e6e6;
 }
-.block-2 {
+.about-us {
   width: 100%;
   background: #fff;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.block-2 .card {
+.about-us img {
   width: 100%;
-  height: 600px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
 }
-.block-2 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
+.about-us .card span {
+  position: relative;
+  font-size: 20px;
 }
-.block-3 {
+.about-us .card h1 {
+  position: relative;
+  font-weight: 700;
+  font-family: montserrat, sans-serif;
+  font-size: 30px;
+  color: #8BC34A;
+}
+.about-us .card h1 strong {
+  color: #8BC34A;
+  font-size: 36px;
+}
+.about-us .card p {
+  margin: 1rem 0;
+  text-indent: 2rem;
+}
+.about-us .card a {
+  background-color: #8BC34A;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  min-width: 170px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-family: montserrat, sans-serif;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.about-us .card a:hover {
+  background-color: #7cad43;
+}
+.news {
   width: 100%;
   background: #f5f6fa;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.block-3 .card {
+.news .card {
   width: 100%;
   height: 500px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
 }
-.block-3 .card:hover {
+.news .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
 }

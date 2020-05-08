@@ -2,12 +2,17 @@
 
 header{
     // border-bottom: solid 3px #16a085;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    // box-shadow: 0 5px 5px rgba(0,0,0,0.2);
     
     .navbar{
         display: flex;
         padding: 1rem 0;
         align-items: center;//主轴居中
+
+        .focus{
+            color: #2989d8 !important;
+            font-weight: bold;
+        }
 
         .logo{
             color: #16a085;
@@ -36,18 +41,21 @@ header{
 
             .links{
                 display: flex;
-                margin-right: auto;
+                margin-left: auto;
 
                 & > li{
-                    margin: 0 1.5rem;
+                    margin: 0 2rem;
                     padding: .5rem 0;
-                    // width: 100px;
-                    // text-align: center;
-
+                    
                     a{
                         color: #777;
+                        transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease; /* Firefox 4 */
+                        -webkit-transition: all 0.3s ease; /* Safari 和 Chrome */
+                        -o-transition: all 0.3s ease; /* Opera */
+
                         &:hover{
-                            color: #333;
+                            color: #2989d8;
                         }
                     }
                 }
@@ -68,9 +76,9 @@ header{
             }
 
             .menu-list{
-                min-width: 105px;
-                margin-left: -1.5rem;
-                margin-top: 8rem;
+                min-width: 120px;
+                margin-left: -2rem;
+                margin-top: 5rem;
                 // padding-top: 1rem;
                 z-index: 100;
                 position: absolute;
@@ -85,7 +93,7 @@ header{
 
                 li{
                     margin: 0;
-                    padding: .5rem 1.5rem;
+                    padding: .5rem 2rem;
                     font-size: 12px;
                     text-align: left;
                 }
