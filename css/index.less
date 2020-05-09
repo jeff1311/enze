@@ -1,3 +1,4 @@
+@import "variables.less";
 /* @import url(size/grid/size.css); */
 @import url(size/size.css);
 /* @import url(size/percent/grid.css); */
@@ -10,13 +11,14 @@
 @import url(margin.css);
 @import url(slidershow.css);
 @import url(/plugins/iconfont/iconfont.css);
+@import url(/plugins/iconfont-1/iconfont.css);
 // @import url(/plugins/bootstrap-3.3.7/css/bootstrap.min.css);
 
 // body{
 //     background: linear-gradient(to right, rgba(42, 22, 155, 1) 39%, rgba(41, 137, 216, 1) 78%, rgba(44, 212, 217, 1) 95%);
 // }
 
-.our-services,.about-us,.news,.block-4,.block-5{
+.our-services,.about-us,.news,.contact-us,.block-5{
 
     overflow: auto;
 
@@ -54,14 +56,48 @@
 
     .card{
         width: 100%;
-        height: 400px;
+        height: 350px;
         background: #fff;
         border-radius: 5px;
+        text-align: center;
+        padding: 2rem;
+        box-sizing: border-box;
 
         &:hover{
-            // background: #2cd4d9;
             transform: translateY(-5px);
             box-shadow: 0 10px 20px 5px #e6e6e6;
+        }
+
+        .icon{
+            text-align: center;
+            width: 100%;
+            padding: 2rem 0;
+
+            .iconfont{
+                color: @main-color;
+                font-size: 70px;
+            }
+        }
+
+        h3{
+            font-weight: bold;
+        }
+        p{
+            margin: 1rem 0;
+            font-size: 12px;
+            overflow: hidden;/*超出部分隐藏*/
+            text-overflow:ellipsis;/*文字超出部分以省略号显示*/
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        a{
+            font-size: 14px;
+            font-weight: bold;
+
+            &:hover{
+                color: @main-color;
+            }
         }
     }
 }
@@ -87,24 +123,24 @@
             font-weight: 700;
             font-family: montserrat,sans-serif;
             font-size: 30px;
-            color: #8BC34A;
+            color: @main-color;
 
             strong{
-                color: #8BC34A;
+                color: @main-color;
                 font-size: 36px;
             }
         }
         // h2{
         //     font-size: 20px;
-        //     color: #8BC34A;
+        //     color: @main-color;
         //     font-weight: 400;
         // }
         p{
             margin: 1rem 0;
-            text-indent: 2rem;
+            // text-indent: 2rem;
         }
         a{
-            background-color: #8BC34A;
+            background-color: @main-color;
             display: inline-block;
             padding: 10px 20px;
             color: #fff;
@@ -120,7 +156,7 @@
             transition: all .3s ease-in-out;
 
             &:hover{
-                background-color: #7cad43;
+                background-color: @main-color-deep;
             }
         }
     }
@@ -135,39 +171,120 @@
 
     .card{
         width: 100%;
-        height: 500px;
+        // height: 500px;
         background: #fff;
         border-radius: 5px;
-        box-shadow: 0 18px 33px 6px rgba(0,0,0,.1);
+        padding: 1.5rem;
+        box-sizing: border-box;
+        // box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.1);
+
+        .img{
+            position: relative; 
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                position: absolute;
+                top:50%; 
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+        }
 
         &:hover{
-            // background: #2cd4d9;
-            transform: translateY(-5px);
-            box-shadow: 0 18px 33px 6px rgba(0,0,0,.1);
+            box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.1);
         }
-        
+
+        h3{
+            margin: 1rem 0;
+        }
+        p{
+            width: 100%;
+            font-size: 12px;
+            overflow: hidden;/*超出部分隐藏*/
+            text-overflow:ellipsis;/*文字超出部分以省略号显示*/
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        a{
+            display: inline-block;
+            margin: 1rem 0;
+            font-size: 14px;
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: .5rem;
+            font-size: 13px;
+            border-top: solid 1px #e6e6e6;
+            box-sizing: border-box;
+        }
     }
 }
 
-.block-4{
+.contact-us{
+    position: relative;
     width: 100%;
-    background: #fff;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    // height: 350px;
+    background-image: url(/images/bg3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 
-    .card{
-        width: 100%;
-        height: 500px;
-        background: #fff;
-        border-radius: 5px;
-        box-shadow: 0 18px 33px 6px rgba(0,0,0,.1);
-
-        &:hover{
-            // background: #2cd4d9;
-            transform: translateY(-5px);
-            box-shadow: 0 18px 33px 6px rgba(0,0,0,.1);
+    .container{
+        div{
+            z-index: 1;
         }
-        
+
+        .img{
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+
+            img{
+                z-index: 1;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .text{
+            display: flex;
+            height: 350px;
+            align-items: center;
+            text-align: center;
+
+            h1{
+                font-size: 35px;
+                font-weight: bold;
+                color: @main-color;
+            }
+            a{
+                color: #4375f1;
+
+                &:hover{
+                    color: #3e6ada;
+                }
+            }
+        }
+    }
+
+    .section-overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        // opacity: .9;
+        top: 0;
+        z-index: 0;
+        // background: linear-gradient(to right,rgb(42,22,155) 39%,rgba(41,137,216,.95) 78%,rgb(44,212,217) 100%);
+        background: rgba(255,255,255,.8);
     }
 }
 
@@ -184,12 +301,6 @@
         border-radius: 5px;
         box-shadow: 0 18px 33px 6px rgba(0,0,0,.1);
 
-        &:hover{
-            // background: #2cd4d9;
-            transform: translateY(-5px);
-            box-shadow: 0 18px 33px 6px rgba(0,0,0,.1);
-        }
-        
     }
 }
 

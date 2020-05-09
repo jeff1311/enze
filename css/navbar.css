@@ -4,11 +4,11 @@ header .navbar {
   align-items: center;
 }
 header .navbar .focus {
-  color: #2989d8 !important;
+  color: #8bc34a !important;
   font-weight: bold;
 }
 header .navbar .logo {
-  color: #16a085;
+  color: #8bc34a;
   font-weight: bold;
   margin-right: 20px;
   font-size: 1.2rem;
@@ -45,7 +45,7 @@ header .navbar .collapse .links > li a {
   /* Opera */
 }
 header .navbar .collapse .links > li a:hover {
-  color: #2989d8;
+  color: #8bc34a;
 }
 header .navbar .collapse .form a {
   border: solid 1px #16a085;

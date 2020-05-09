@@ -9,17 +9,18 @@
 @import url(margin.css);
 @import url(slidershow.css);
 @import url(/plugins/iconfont/iconfont.css);
+@import url(/plugins/iconfont-1/iconfont.css);
 .our-services,
 .about-us,
 .news,
-.block-4,
+.contact-us,
 .block-5 {
   overflow: auto;
 }
 .our-services *,
 .about-us *,
 .news *,
-.block-4 *,
+.contact-us *,
 .block-5 * {
   color: #777c87;
   transition: all 0.3s ease;
@@ -33,7 +34,7 @@
 .our-services .title,
 .about-us .title,
 .news .title,
-.block-4 .title,
+.contact-us .title,
 .block-5 .title {
   width: 100%;
   text-align: center;
@@ -42,7 +43,7 @@
 .our-services .title h1,
 .about-us .title h1,
 .news .title h1,
-.block-4 .title h1,
+.contact-us .title h1,
 .block-5 .title h1 {
   font-size: 2.5rem;
   font-weight: 500;
@@ -51,7 +52,7 @@
 .our-services .title span,
 .about-us .title span,
 .news .title span,
-.block-4 .title span,
+.contact-us .title span,
 .block-5 .title span {
   display: block;
   height: 2px;
@@ -67,13 +68,46 @@
 }
 .our-services .card {
   width: 100%;
-  height: 400px;
+  height: 350px;
   background: #fff;
   border-radius: 5px;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 .our-services .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px 5px #e6e6e6;
+}
+.our-services .card .icon {
+  text-align: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+.our-services .card .icon .iconfont {
+  color: #8bc34a;
+  font-size: 70px;
+}
+.our-services .card h3 {
+  font-weight: bold;
+}
+.our-services .card p {
+  margin: 1rem 0;
+  font-size: 12px;
+  overflow: hidden;
+  /*超出部分隐藏*/
+  text-overflow: ellipsis;
+  /*文字超出部分以省略号显示*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.our-services .card a {
+  font-size: 14px;
+  font-weight: bold;
+}
+.our-services .card a:hover {
+  color: #8bc34a;
 }
 .about-us {
   width: 100%;
@@ -93,18 +127,17 @@
   font-weight: 700;
   font-family: montserrat, sans-serif;
   font-size: 30px;
-  color: #8BC34A;
+  color: #8bc34a;
 }
 .about-us .card h1 strong {
-  color: #8BC34A;
+  color: #8bc34a;
   font-size: 36px;
 }
 .about-us .card p {
   margin: 1rem 0;
-  text-indent: 2rem;
 }
 .about-us .card a {
-  background-color: #8BC34A;
+  background-color: #8bc34a;
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
@@ -120,7 +153,7 @@
   transition: all 0.3s ease-in-out;
 }
 .about-us .card a:hover {
-  background-color: #7cad43;
+  background-color: #7aad40;
 }
 .news {
   width: 100%;
@@ -130,31 +163,103 @@
 }
 .news .card {
   width: 100%;
-  height: 500px;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.news .card .img {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.news .card .img img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .news .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.1);
 }
-.block-4 {
+.news .card h3 {
+  margin: 1rem 0;
+}
+.news .card p {
   width: 100%;
-  background: #fff;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  font-size: 12px;
+  overflow: hidden;
+  /*超出部分隐藏*/
+  text-overflow: ellipsis;
+  /*文字超出部分以省略号显示*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
-.block-4 .card {
+.news .card a {
+  display: inline-block;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+.news .card .bottom {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 500px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 0.5rem;
+  font-size: 13px;
+  border-top: solid 1px #e6e6e6;
+  box-sizing: border-box;
 }
-.block-4 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
+.contact-us {
+  position: relative;
+  width: 100%;
+  background-image: url(/images/bg3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.contact-us .container div {
+  z-index: 1;
+}
+.contact-us .container .img {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+.contact-us .container .img img {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact-us .container .text {
+  display: flex;
+  height: 350px;
+  align-items: center;
+  text-align: center;
+}
+.contact-us .container .text h1 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #8bc34a;
+}
+.contact-us .container .text a {
+  color: #4375f1;
+}
+.contact-us .container .text a:hover {
+  color: #3e6ada;
+}
+.contact-us .section-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.8);
 }
 .block-5 {
   width: 100%;
@@ -167,10 +272,6 @@
   height: 500px;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
-}
-.block-5 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 18px 33px 6px rgba(0, 0, 0, 0.1);
 }
 .bg-blue {
