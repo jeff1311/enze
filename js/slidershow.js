@@ -65,11 +65,11 @@ var slidershow = {
 
 
 var images = [
-    '/images/bg1.jpg',
-    '/images/bg2.jpg',
-    '/images/bg3.jpg',
-    '/images/bg4.jpg',
-    '/images/bg5.jpg'
+    '/images/bg/06.jpg',
+    '/images/bg/12.jpg',
+    '/images/bg/08.jpg',
+    '/images/bg/09.jpg',
+    '/images/bg/10.jpg'
 ]
 
 slidershow.render(images);
